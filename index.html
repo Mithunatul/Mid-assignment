@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cupcake">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.5/dist/full.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="./style/style.css">
+    <title>The Virtual Bazar</title>
+</head>
+<body>
+    <!-- navbar -->
+    <header>
+        <nav>
+            <div class="navbar bg-base-200">
+                <div class="flex-1">
+                  <a class="btn btn-ghost normal-case text-2xl font-bold">The Virtual Bazar</a>
+                </div>
+                <div class="flex-none">
+                  <ul class="menu menu-horizontal px-1 font-bold">
+                    <li><a>Home</a></li>
+                    <li>
+                      <a>Service</a>
+                    </li>
+                    <li><a>Review</a></li>
+                    <li><a>About Us</a></li>
+                    <li><a>Contact Us</a></li>
+                  </ul>
+                </div>
+              </div>
+        </nav>
+    </header>
+    <main>
+        <!-- carousel part -->
+        <section>
+        <div class="carousel w-full">
+            <div id="slide1" class="carousel-item relative w-full">
+              <img src="https://img.freepik.com/free-photo/brown-man-s-leather-derby-shoes_53876-97144.jpg?w=740&t=st=1680680556~exp=1680681156~hmac=9cf1827d4096cf34765e0a8d1bd10252a87acea6bf2ad9094c08751f3b4454ae" />
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide4" class="btn btn-circle">❮</a> 
+                <a href="#slide2" class="btn btn-circle">❯</a>
+              </div>
+            </div> 
+            <div id="slide2" class="carousel-item relative w-full">
+              <img src="https://img.freepik.com/premium-psd/mockup-three-smart-watches_125540-1663.jpg?w=900" class="w-full" />
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide1" class="btn btn-circle">❮</a> 
+                <a href="#slide3" class="btn btn-circle">❯</a>
+              </div>
+            </div> 
+            <div id="slide3" class="carousel-item relative w-full">
+              <img src="https://img.freepik.com/free-photo/levitating-product-display-with-headphones_23-2149670637.jpg?w=740&t=st=1680680645~exp=1680681245~hmac=58058c554a8cdc36422a1e68d2dfb720f31ff3cf00ac2ad01a8d6af319c0aae2" />
+              <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                <a href="#slide2" class="btn btn-circle">❮</a> 
+                <a href="#slide4" class="btn btn-circle">❯</a>
+              </div>
+            </div> 
+          </div>
+        </section>
+          <!-- service section -->
+        <section>
+            <div class="service">
+                <h2 class="text-6xl font-black text-center mt-5 mb-10 bg-base-100">Service</h2>
+                <div class="service_container flex">
+                  
+                  <div class=" my-card card w-2/6 ml-10 p-4">
+                    <h2 class="text-center mb-5 text-5xl font-bold">My Card</h2>
+                    <hr>
+                    <h3 class="text-center mb-5 text-xl font-bold">Total Products  <span id="total-products">0</span></h3>
+                    <h3 class="text-center mb-5 text-xl font-bold" >Price  <span id="price">0</span></h3>
+                    <h3 class="text-center mb-5 text-xl font-bold" >Delivery Charge  <span id="delivery-charge">0</span></h3>
+                    <hr>
+                    <h2 class="text-center mb-5 text-xl font-bold" >Total Price  <span id="total">0</span></h2>
+                    <h3 class="text-center mb-5 text-xl font-bold" >Tax(15%)  <span id="tax">0</span></h3>
+                    <h3 class="text-center mb-5 text-xl font-bold" >Grand Total  <span id="grand-total">0</span></h3>
+                    <h3 class="text-center mb-5 text-xl font-bold" >Discount  <span id="discount">0</span></h3>
+                    <h3 class="text-center mb-5 text-xl font-bold" >Final Total  <span id="final-total">0</span></h3>
+                    <button onclick="orderProducts()" class="btn btn-secondary">Order Now</button>
+                    <!-- <div id="details">
+                        
+                    </div> -->
+                    
+                </div>
+
+                <div id="display-card" class=" ml-10 grid grid-cols-2 gap-10 ">
+                
+                </div>
+
+                </div>
+              </div>
+        </section>
+        <!-- review section -->
+        <section>
+          <div>
+            <h2 class="text-6xl font-black text-center mt-5 mb-10 bg-base-100">Reviews</h2>
+            <div class="carousel w-full">
+              <div id="item1" class="carousel-item w-full">
+                <img src="https://img.freepik.com/free-vector/online-wishes-list-concept-illustration_114360-3900.jpg?w=740&t=st=1680680999~exp=1680681599~hmac=3e6fb50caf1b7873707a2d7627e5d28b1d5e5c47535a6f5e0430feb43d005859" />
+              </div> 
+              <div id="item2" class="carousel-item w-full">
+                <img src="https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="w-full" />
+              </div> 
+              <div id="item3" class="carousel-item w-full">
+                <img src="https://images.unsplash.com/photo-1516478177764-9fe5bd7e9717?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" class="w-full" />
+              </div> 
+              <div id="item4" class="carousel-item w-full">
+                <img src="https://images.unsplash.com/photo-1465479423260-c4afc24172c6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80" class="w-full" />
+              </div>
+            </div> 
+            <div class="flex justify-center w-full py-2 gap-2">
+              <a href="#item1" class="btn btn-xs">1</a> 
+              <a href="#item2" class="btn btn-xs">2</a> 
+              <a href="#item3" class="btn btn-xs">3</a> 
+              <a href="#item4" class="btn btn-xs">4</a>
+            </div>
+          </div>
+        </section>
+        <!-- page view -->
+        <section>
+          <h2 class="text-6xl font-black text-center mt-5 mb-10 bg-base-100">Website Stats</h2>
+          <div class="stats shadow w-full">
+  
+            <div class="stat">
+              <div class="stat-figure text-secondary">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-8 h-8 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              </div>
+              <div class="stat-title">Total Page View</div>
+              <div class="stat-value">31K</div>
+              <div class="stat-desc">Jan 1st - Feb 1st</div>
+            </div>
+            
+            <div class="stat">
+              <div class="stat-figure text-secondary">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-8 h-8 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+              </div>
+              <div class="stat-title">New Users</div>
+              <div class="stat-value">4,200</div>
+              <div class="stat-desc">↗︎ 400 (22%)</div>
+            </div>
+            
+            <div class="stat">
+              <div class="stat-figure text-secondary">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-8 h-8 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path></svg>
+              </div>
+              <div class="stat-title">New Registers</div>
+              <div class="stat-value">1,200</div>
+              <div class="stat-desc">↘︎ 90 (14%)</div>
+            </div>
+            
+          </div>
+        </section>
+        <!-- contact us -->
+        <section class="mt-10">
+          <div class="hero min-h-screen bg-base-200">
+            <div class="hero-content flex-col lg:flex-row-reverse">
+              <div class="text-center lg:text-left">
+                <h1 class="text-5xl font-bold">Contact Us!</h1>
+                <p class="py-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis voluptate tenetur blanditiis adipisci quibusdam harum ad assumenda repellendus quae repellat culpa perspiciatis, eos odio debitis, praesentium maiores soluta officia nostrum ab odit voluptates corporis aut dolores. Debitis vel, a labore eum rem amet optio beatae, omnis perspiciatis hic reprehenderit reiciendis accusantium praesentium quam officia rerum repudiandae dolore tempora doloremque. Quam.</p>
+              </div>
+              <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                <div class="card-body">
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Email</span>
+                    </label>
+                    <input type="text" placeholder="email" class="input input-bordered" />
+                  </div>
+                  <div class="form-control">
+                    <label class="label">
+                      <span class="label-text">Phone Number</span>
+                    </label>
+                    <input type="number" placeholder="Phone Number" class="input input-bordered" />
+                  </div>
+                  <div class="form-control mt-6">
+                    <button class="btn btn-primary">Submit</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+    </main>
+    
+      <footer class="footer footer-center p-4 bg-base-300 text-base-content">
+        <footer class="footer p-10 bg-neutral text-neutral-content">
+          <div>
+            <span class="footer-title">Services</span> 
+            <a class="link link-hover">Branding</a>
+            <a class="link link-hover">Design</a>
+            <a class="link link-hover">Marketing</a>
+            <a class="link link-hover">Advertisement</a>
+          </div> 
+          <div>
+            <span class="footer-title">Company</span> 
+            <a class="link link-hover">About us</a>
+            <a class="link link-hover">Contact</a>
+            <a class="link link-hover">Jobs</a>
+            <a class="link link-hover">Press kit</a>
+          </div> 
+          <div>
+            <span class="footer-title">Legal</span> 
+            <a class="link link-hover">Terms of use</a>
+            <a class="link link-hover">Privacy policy</a>
+            <a class="link link-hover">Cookie policy</a>
+          </div>
+        </footer>
+      </footer>
+    
+
+    <script src="./js/funtionality.js"></script>
+</body>
+</html>
